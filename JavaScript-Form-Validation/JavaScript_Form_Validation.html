@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+function validateForm() 
+{
+  var x = document.forms["customerInfo"]["fname"].value;
+  var y = document.forms["customerInfo"]["lname"].value;
+  var z = document.forms["customerInfo"]["email"].value;
+  if (x == "") 
+  {
+    alert("First Name must be filled out");
+    return false;
+  }
+  else if (y == "") 
+  {
+    alert("Last Name must be filled out");
+    return false;
+  }
+  else if (z == "") 
+  {
+    alert("Email must be filled out");
+    return false;
+  }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Customer Information</h1>
+<form name="customerInfo" onsubmit="return validateForm()">
+	First Name: <input type="text" id="fname" name="fname" value=""><br><br>
+	Last name:  <input type="text" id="lname" name="lname" value=""><br><br>
+	Email:	<input type="email" id="email" name="email" value=""><br><br>
+	<input type="submit" value="Submit">
+	
+	
+</form>
+
+
+</body>
+</html>
